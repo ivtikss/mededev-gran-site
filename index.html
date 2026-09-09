@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Мобильный робот для автоматизированного неразрушающего контроля стальных труб."
+    />
+    <title>Роботехскан — мобильный робот для контроля труб</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="support-bar">
+      <a class="brand" href="#top" aria-label="Роботехскан, на первый экран">
+        РОБОТЕХСКАН
+      </a>
+
+      <p class="support-copy">
+        Проект реализован при поддержке Фонда содействия инновациям в рамках
+        программы «Студенческий стартап» мероприятия «Платформа университетского
+        технологического предпринимательства» федерального проекта «Технологии».
+      </p>
+
+      <div class="support-links" aria-label="Организации поддержки">
+        <span>Фонд содействия инновациям</span>
+        <span>Платформа университетского техпредпринимательства</span>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <nav class="screen-nav" aria-label="Навигация по экранам">
+          <span class="screen-nav__line" aria-hidden="true"></span>
+          <a class="screen-nav__mark screen-nav__mark--brand" href="#top">RT</a>
+          <a class="screen-nav__mark is-active" href="#top" aria-current="page">1</a>
+          <a class="screen-nav__mark" href="#problem">2</a>
+          <span class="screen-nav__mark">3</span>
+          <span class="screen-nav__mark">4</span>
+          <span class="screen-nav__mark">5</span>
+          <span class="screen-nav__mark">6</span>
+          <span class="screen-nav__mark">7</span>
+          <span class="screen-nav__mark">✓</span>
+        </nav>
+
+        <div class="hero__content">
+          <div class="hero__copy">
+            <p class="eyebrow">Автоматизированная диагностика труб</p>
+
+            <h1 id="hero-title">
+              Мобильный робот<br />
+              для контроля труб
+            </h1>
+
+            <span class="stage">Стадия: прототип</span>
+
+            <p class="hero__description">
+              Разрабатываем автономного мобильного робота для наружного
+              неразрушающего контроля стальных труб. Платформа удерживается на
+              поверхности магнитными колёсами, движется по винтовой траектории
+              и выполняет сканирование методом MFL.
+            </p>
+
+            <a class="primary-action" href="#problem">
+              <span>Как работает робот</span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <ul class="feature-list" aria-label="Основные характеристики">
+              <li>Трубы Ø60–168 мм</li>
+              <li>Магнитная дефектоскопия MFL</li>
+              <li>Винтовое сканирование</li>
+              <li>Автономная работа</li>
+            </ul>
+
+            <p class="company-line">
+              ООО «РОБОТЕХСКАН» · ПРОМЫШЛЕННАЯ РОБОТОТЕХНИКА
+            </p>
+          </div>
+
+          <div class="hero__visual-column">
+            <figure class="robot-card" id="robot-visual">
+              <div class="robot-card__media">
+                <img
+                  src="assets/robot-hero.png"
+                  alt="Мобильный робот Роботехскан на поверхности стальной трубы"
+                />
+                <span class="robot-card__accent" aria-hidden="true"></span>
+              </div>
+              <figcaption>
+                <strong>Визуальная концепция мобильной платформы</strong>
+                <span>Проектная модель робота на участке трубы</span>
+              </figcaption>
+            </figure>
+
+            <ul class="industry-tags" aria-label="Области применения">
+              <li>наружный контроль</li>
+              <li>нефтегазовая отрасль</li>
+              <li>экспресс-диагностика</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="problem-section" id="problem" aria-labelledby="problem-title">
+        <div class="problem-decoration" aria-hidden="true">
+          <span class="problem-decoration__orbit"></span>
+          <span class="problem-decoration__dot"></span>
+          <span class="problem-decoration__grid"></span>
+          <span class="problem-decoration__message">
+            Надёжность<br />
+            трубопроводов<br />
+            сегодня<br />
+            и завтра
+          </span>
+        </div>
+
+        <div class="problem-section__inner">
+          <header class="problem-heading">
+            <p class="section-label">
+              <span>Задача</span>
+              <span aria-hidden="true"></span>
+            </p>
+
+            <h2 id="problem-title">
+              Наружный контроль<br />
+              труб требует<br />
+              автоматизации
+            </h2>
+
+            <p>
+              Традиционный неразрушающий контроль труб во многих случаях
+              требует непосредственного участия оператора или применения
+              стационарного оборудования. Это снижает производительность
+              диагностики и усложняет проведение контроля в полевых условиях.
+              Проект направлен на автоматизацию наружного контроля труб с
+              помощью мобильной роботизированной платформы.
+            </p>
+          </header>
+
+          <ol class="problem-list">
+            <li class="problem-card">
+              <div class="problem-card__topline">
+                <span class="problem-card__number">01</span>
+                <span class="problem-card__rule" aria-hidden="true"></span>
+              </div>
+              <img
+                src="assets/problem-operator.png"
+                alt=""
+                class="problem-card__image problem-card__image--operator"
+              />
+              <h3>Участие оператора</h3>
+              <p>
+                При ручном контроле специалист непосредственно перемещает
+                диагностическое оборудование и контролирует процесс
+                сканирования, что ограничивает производительность работ.
+              </p>
+            </li>
+
+            <li class="problem-card">
+              <div class="problem-card__topline">
+                <span class="problem-card__number">02</span>
+                <span class="problem-card__rule" aria-hidden="true"></span>
+              </div>
+              <img
+                src="assets/problem-coverage.png"
+                alt=""
+                class="problem-card__image problem-card__image--coverage"
+              />
+              <h3>Сложность полного охвата</h3>
+              <p>
+                Для достоверной диагностики необходимо последовательно
+                обследовать наружную поверхность трубы. При ручном контроле это
+                требует повторяющихся перемещений и соблюдения траектории
+                сканирования.
+              </p>
+            </li>
+
+            <li class="problem-card problem-card--accent">
+              <div class="problem-card__topline">
+                <span class="problem-card__number">03</span>
+                <span class="problem-card__rule" aria-hidden="true"></span>
+              </div>
+              <img
+                src="assets/problem-field.png"
+                alt=""
+                class="problem-card__image problem-card__image--field"
+              />
+              <h3>Полевые условия</h3>
+              <p>
+                Диагностика должна выполняться на трубных базах, ремонтных
+                участках и объектах нефтегазовой отрасли, где применение
+                крупногабаритных стационарных установок затруднено.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
