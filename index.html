@@ -8,9 +8,78 @@
       content="Мобильный робот для автоматизированного неразрушающего контроля стальных труб."
     />
     <title>Роботехскан — мобильный робот для контроля труб</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <nav
+      class="screen-nav"
+      data-screen-nav
+      aria-label="Навигация по экранам"
+    >
+      <span class="screen-nav__line" aria-hidden="true"></span>
+      <span
+        class="screen-nav__progress"
+        data-screen-nav-progress
+        aria-hidden="true"
+      ></span>
+      <span
+        class="screen-nav__indicator"
+        data-screen-nav-indicator
+        aria-hidden="true"
+      ></span>
+      <a
+        class="screen-nav__mark is-active"
+        data-screen-nav-mark
+        href="#top"
+        aria-label="Первый экран"
+        aria-current="page"
+      >
+        1
+      </a>
+      <a
+        class="screen-nav__mark"
+        data-screen-nav-mark
+        href="#problem"
+        aria-label="Второй экран"
+      >
+        2
+      </a>
+      <a
+        class="screen-nav__mark"
+        data-screen-nav-mark
+        href="#applications"
+        aria-label="Третий экран"
+      >
+        3
+      </a>
+      <a
+        class="screen-nav__mark"
+        data-screen-nav-mark
+        href="#product"
+        aria-label="Четвёртый экран"
+      >
+        4
+      </a>
+      <a
+        class="screen-nav__mark"
+        data-screen-nav-mark
+        href="#system"
+        aria-label="Пятый экран"
+      >
+        5
+      </a>
+      <a
+        class="screen-nav__mark"
+        data-screen-nav-mark
+        href="#development"
+        aria-label="Шестой экран"
+      >
+        6
+      </a>
+    </nav>
+
     <header class="support-bar">
       <a class="brand" href="#top" aria-label="Роботехскан, на первый экран">
         РОБОТЕХСКАН
@@ -22,27 +91,27 @@
         технологического предпринимательства» федерального проекта «Технологии».
       </p>
 
-      <div class="support-links" aria-label="Организации поддержки">
-        <span>Фонд содействия инновациям</span>
-        <span>Платформа университетского техпредпринимательства</span>
+      <div class="support-logos" aria-label="Организации поддержки">
+        <img
+          class="support-logo support-logo--fasie"
+          src="assets/fasie.svg"
+          alt="Фонд содействия инновациям"
+        />
+        <img
+          class="support-logo support-logo--platform"
+          src="assets/platform-univertechpred.png"
+          alt="Платформа университетского технологического предпринимательства"
+        />
       </div>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <nav class="screen-nav" aria-label="Навигация по экранам">
-          <span class="screen-nav__line" aria-hidden="true"></span>
-          <a class="screen-nav__mark screen-nav__mark--brand" href="#top">RT</a>
-          <a class="screen-nav__mark is-active" href="#top" aria-current="page">1</a>
-          <a class="screen-nav__mark" href="#problem">2</a>
-          <span class="screen-nav__mark">3</span>
-          <span class="screen-nav__mark">4</span>
-          <span class="screen-nav__mark">5</span>
-          <span class="screen-nav__mark">6</span>
-          <span class="screen-nav__mark">7</span>
-          <span class="screen-nav__mark">✓</span>
-        </nav>
-
+    <main>
+      <section
+        class="hero"
+        id="top"
+        data-screen-section
+        aria-labelledby="hero-title"
+      >
         <div class="hero__content">
           <div class="hero__copy">
             <p class="eyebrow">Автоматизированная диагностика труб</p>
@@ -102,7 +171,12 @@
         </div>
       </section>
 
-      <section class="problem-section" id="problem" aria-labelledby="problem-title">
+      <section
+        class="problem-section"
+        id="problem"
+        data-screen-section
+        aria-labelledby="problem-title"
+      >
         <div class="problem-decoration" aria-hidden="true">
           <span class="problem-decoration__orbit"></span>
           <span class="problem-decoration__dot"></span>
@@ -192,6 +266,339 @@
                 участках и объектах нефтегазовой отрасли, где применение
                 крупногабаритных стационарных установок затруднено.
               </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        class="applications-section"
+        id="applications"
+        data-screen-section
+        aria-labelledby="applications-title"
+      >
+        <div class="applications-section__inner">
+          <header class="applications-heading">
+            <div>
+              <p class="applications-label">Сценарии применения</p>
+              <h2 id="applications-title">
+                Автоматизированный<br />
+                контроль труб<br />
+                в полевых условиях
+              </h2>
+            </div>
+
+            <p class="applications-heading__description">
+              Мобильный робот предназначен для наружной экспресс-диагностики
+              стальных труб непосредственно на объектах нефтегазовой отрасли.
+              Автономная платформа перемещается по поверхности трубы, выполняет
+              сканирование и позволяет локализовать участки с признаками
+              дефектов.
+            </p>
+          </header>
+
+          <ol class="applications-list">
+            <li class="application-card">
+              <img
+                src="assets/application-pipe-base.png"
+                alt="Мобильный робот контролирует трубу на трубной базе"
+              />
+              <div class="application-card__content">
+                <span class="application-card__number">01</span>
+                <h3>Трубные базы</h3>
+                <p>
+                  Контроль технического состояния НКТ на площадках хранения и
+                  подготовки труб. Робот устанавливается на трубу и выполняет
+                  автоматизированное сканирование.
+                </p>
+              </div>
+            </li>
+
+            <li class="application-card">
+              <img
+                src="assets/application-drilling-site.png"
+                alt="Мобильный робот контролирует трубу на буровой площадке"
+              />
+              <div class="application-card__content">
+                <span class="application-card__number">02</span>
+                <h3>Буровые площадки</h3>
+                <p>
+                  Экспресс-диагностика труб непосредственно на объектах
+                  нефтегазодобычи без применения крупногабаритных стационарных
+                  установок.
+                </p>
+              </div>
+            </li>
+
+            <li class="application-card">
+              <img
+                src="assets/application-repair-site.png"
+                alt="Мобильный робот контролирует трубу на ремонтном участке"
+              />
+              <div class="application-card__content">
+                <span class="application-card__number">03</span>
+                <h3>Ремонтные участки</h3>
+                <p>
+                  Контроль труб на ремонтных площадках с последующей
+                  локализацией и маркировкой участков, требующих дополнительной
+                  проверки.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        class="product-section"
+        id="product"
+        data-screen-section
+        aria-labelledby="product-title"
+      >
+        <div class="product-section__inner">
+          <div class="product-overview">
+            <p class="product-label">Продукт</p>
+            <h2 id="product-title">
+              Мобильный робот для<br />
+              автоматизированного<br />
+              контроля труб
+            </h2>
+
+            <figure class="product-visual">
+              <img
+                src="assets/product-robot.png"
+                alt="Мобильный робот выполняет винтовое сканирование стальной трубы"
+              />
+            </figure>
+          </div>
+
+          <div class="product-details">
+            <ol class="product-features">
+              <li>
+                <span class="product-feature__number">01</span>
+                <div>
+                  <h3>Удержание и перемещение по трубе</h3>
+                  <p>
+                    Мобильная платформа удерживается на наружной поверхности
+                    трубы за счёт магнитных колёс и системы прижимных роликов.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <span class="product-feature__number">02</span>
+                <div>
+                  <h3>Винтовое сканирование поверхности</h3>
+                  <p>
+                    Два независимых привода формируют винтовую траекторию
+                    движения, обеспечивая последовательный охват наружной
+                    поверхности контролируемого участка.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <span class="product-feature__number">03</span>
+                <div>
+                  <h3>Магнитная диагностика и регистрация дефектов</h3>
+                  <p>
+                    Сканирующий модуль на основе магнитной системы и датчиков
+                    Холла предназначен для регистрации изменений магнитного
+                    поля в зоне дефектов трубы.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="product-summary">
+              <p>
+                Конструкция объединяет автономную мобильную платформу, систему
+                винтового перемещения и модуль магнитного неразрушающего
+                контроля.
+              </p>
+              <span>
+                Текущая стадия проекта — разработка и испытание прототипа
+                мобильного робота.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="system-section"
+        id="system"
+        data-screen-section
+        aria-labelledby="system-title"
+      >
+        <div class="system-section__inner">
+          <header class="system-heading">
+            <div>
+              <p class="system-label">Система</p>
+              <h2 id="system-title">
+                Система робота:<br />
+                платформа, управление<br />
+                и магнитная диагностика
+              </h2>
+            </div>
+
+            <p class="system-heading__description">
+              В конструкции объединены мобильная платформа, электронная система
+              управления и модуль магнитного неразрушающего контроля. Совместная
+              работа узлов обеспечивает удержание на трубе, движение по
+              винтовой траектории и регистрацию магнитных аномалий.
+            </p>
+          </header>
+
+          <ol class="system-list">
+            <li class="system-card">
+              <div class="system-card__media">
+                <img
+                  src="assets/system-platform.png"
+                  alt="Схема мобильной платформы робота на трубе"
+                />
+              </div>
+              <div class="system-card__content">
+                <span class="system-card__letter">A</span>
+                <div>
+                  <h3>Мобильная платформа</h3>
+                  <p>
+                    Магнитные ведущие колёса и подпружиненные прижимные ролики
+                    обеспечивают устойчивое удержание и перемещение робота по
+                    наружной поверхности трубы.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="system-card">
+              <div class="system-card__media">
+                <img
+                  src="assets/system-trajectory.png"
+                  alt="Схема винтовой траектории движения по трубе"
+                />
+              </div>
+              <div class="system-card__content">
+                <span class="system-card__letter">B</span>
+                <div>
+                  <h3>Управление винтовой траекторией</h3>
+                  <p>
+                    Независимое управление двумя приводами позволяет задавать
+                    скорость движения и формировать винтовую траекторию для
+                    последовательного охвата поверхности трубы.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="system-card">
+              <div class="system-card__media">
+                <img
+                  src="assets/system-diagnostics.png"
+                  alt="Схема магнитной диагностики дефекта трубы"
+                />
+              </div>
+              <div class="system-card__content">
+                <span class="system-card__letter">C</span>
+                <div>
+                  <h3>Магнитная диагностика</h3>
+                  <p>
+                    Модуль MFL регистрирует изменения магнитного поля в зоне
+                    дефектов и формирует данные для последующего анализа
+                    состояния трубы.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        class="development-section"
+        id="development"
+        data-screen-section
+        aria-labelledby="development-title"
+      >
+        <div class="development-section__inner">
+          <div class="development-overview">
+            <p class="development-label">Разработка</p>
+            <h2 id="development-title">
+              Разработка<br />
+              мобильного робота<br />
+              по этапам
+            </h2>
+
+            <p class="development-description">
+              Второй этап проекта охватывает разработку конструкции мобильной
+              платформы, реализацию винтового перемещения, сборку прототипа и
+              проверку его ходовых характеристик. Завершающим элементом этапа
+              является создание сайта стартап-проекта.
+            </p>
+
+            <figure class="development-visual">
+              <img
+                src="assets/development-cycle.png"
+                alt="Цикл разработки мобильного робота от проектирования до испытаний"
+              />
+            </figure>
+          </div>
+
+          <ol class="development-list">
+            <li>
+              <span class="development-step__number">01</span>
+              <div>
+                <h3>Разработка несущего каркаса</h3>
+                <p>
+                  Проектирование конструкции мобильной платформы, размещение
+                  приводов, магнитных колёс и системы прижимных роликов.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span class="development-step__number">02</span>
+              <div>
+                <h3>Механизм винтового перемещения</h3>
+                <p>
+                  Разработка механической и программной части, обеспечивающей
+                  движение робота вокруг трубы по винтовой траектории.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span class="development-step__number">03</span>
+              <div>
+                <h3>Сборка мобильного робота</h3>
+                <p>
+                  Изготовление и объединение механических, приводных,
+                  электронных и диагностических узлов в единый прототип.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span class="development-step__number">04</span>
+              <div>
+                <h3>Ходовые испытания</h3>
+                <p>
+                  Проверка устойчивости движения, удержания на трубе и
+                  работоспособности винтовой траектории на испытательных
+                  образцах.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span class="development-step__number">05</span>
+              <div>
+                <h3>Сайт стартап-проекта</h3>
+                <p>
+                  Публичное представление продукта, принципа работы, результатов
+                  разработки и материалов проекта.
+                </p>
+              </div>
             </li>
           </ol>
         </div>
