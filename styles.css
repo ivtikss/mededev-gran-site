@@ -502,9 +502,9 @@ h1 {
   width: 145px;
   height: 105px;
   object-fit: contain;
-  filter: invert(1) grayscale(1) contrast(1.55);
-  mix-blend-mode: multiply;
-  opacity: 0.86;
+  filter: none;
+  mix-blend-mode: normal;
+  opacity: 1;
 }
 
 .problem-card__image--operator {
@@ -519,9 +519,6 @@ h1 {
 
 .problem-card__image--field {
   width: 158px;
-  filter: none;
-  mix-blend-mode: normal;
-  opacity: 1;
 }
 
 .problem-card h3 {
@@ -961,6 +958,18 @@ h1 {
   object-fit: contain;
   object-position: center;
   filter: drop-shadow(0 14px 18px rgba(35, 62, 78, 0.15));
+}
+
+.system-card__image--platform {
+  transform: translate(-2.8%, -4.4%);
+}
+
+.system-card__image--trajectory {
+  transform: translate(-1.8%, -3.6%);
+}
+
+.system-card__image--diagnostics {
+  transform: translate(1.2%, -2.1%);
 }
 
 .system-card__content {
